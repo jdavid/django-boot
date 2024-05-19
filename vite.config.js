@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -7,13 +6,12 @@ export default defineConfig(({ command, mode }) => {
     let config = {
         base: '/static/',
         build: {
-            manifest: true,
+            manifest: "manifest.json",
             outDir: 'var/build',
             rollupOptions: {
             }
         },
         plugins: [
-            svelte({}),
         ]
     }
 
@@ -31,5 +29,6 @@ export default defineConfig(({ command, mode }) => {
         }
     }
 
+    //console.log('CONFIG', config);
     return config;
 })

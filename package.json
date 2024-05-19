@@ -2,19 +2,22 @@
   "name": "django-boot",
   "version": "1.0.0",
   "type": "module",
+  "description": "",
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run minify && npm run rename",
     "serve": "vite preview",
     "minify": "esbuild var/build/main.js --minify --outdir=var/build --allow-overwrite",
-    "rename": "bash ansible/rename.sh"
+    "rename": "bash ansible/rename.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "",
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.4",
-    "@urql/svelte": "^4.0",
-    "graphql": "^16.2",
-    "sass": "^1.54",
-    "svelte": "^4.0",
-    "vite": "^4.4"
+    "sass": "^1.77",
+    "vite": "^4.5"
+  },
+  "dependencies": {
   }
 }
