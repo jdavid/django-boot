@@ -1,10 +1,10 @@
 # Django
-from django.urls import path
+from django.urls import re_path
 
 # Import from boot
 from . import views
 
 
 urlpatterns = [
-    path('sendfile/<path>', views.SendfileView.as_view(), name='sendfile'),
+    re_path(r'^sendfile/(?P<path>.*)$', views.SendfileView.as_view(), name='sendfile'),
 ]
