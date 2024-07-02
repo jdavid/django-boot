@@ -6,7 +6,7 @@ supervisor==4.2.5
 uvicorn==0.30.1
 
 {% if database.engine == 'postgres' %}
-psycopg==3.1.19
+psycopg==3.2.1
 {% endif %}
 
 {% if cache.backend == 'memcached' %}
