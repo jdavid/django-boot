@@ -23,7 +23,6 @@ load_dotenv(f'{BASE_DIR}/.envrc')
 
 # Applications
 INSTALLED_APPS += [
-    'apps.boot',
 ]
 
 # Static files
