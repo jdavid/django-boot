@@ -28,8 +28,8 @@
       workers         : 6
 
     mods:
-    - "mods.sendfile"
-    - "mods.vite"
+    - "mods/sendfile"
+    - "mods/vite"
 
     django_cert:
       email           : ""

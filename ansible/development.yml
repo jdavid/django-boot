@@ -19,8 +19,8 @@
       port            : 8000
 
     mods:
-    - "mods.sendfile"
-    - "mods.vite"
+    - "mods/sendfile"
+    - "mods/vite"
 
     supervisor:
       daemon          : false
