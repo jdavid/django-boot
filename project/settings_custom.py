@@ -23,9 +23,6 @@ load_dotenv(f'{BASE_DIR}/.envrc')
 
 # Applications
 INSTALLED_APPS += [
-    # Requirements
-    'django_vite',
-    # Project apps
     'apps.boot',
 ]
 
@@ -60,16 +57,6 @@ MANAGERS = ADMINS
 fqdn = getfqdn()
 DEFAULT_FROM_EMAIL = 'webmaster@' + fqdn
 SERVER_EMAIL = 'root@' + fqdn
-
-# Vite
-DJANGO_VITE = {
-    'default': {
-        'dev_mode': DEBUG,
-    },
-}
-
-if not DEBUG:
-    STATICFILES_DIRS.append(BASE_DIR / 'var' / 'build')
 
 # Local settings, these should not be committed
 try:
