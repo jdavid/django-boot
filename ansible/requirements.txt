@@ -1,7 +1,7 @@
-Django==5.0.7
+Django==5.1
 python-dotenv==1.0.1
 supervisor==4.2.5
-uvicorn==0.30.3
+uvicorn==0.30.5
 
 {% if database.engine == 'postgres' %}
 psycopg==3.2.1
