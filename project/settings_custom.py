@@ -20,9 +20,7 @@ INSTALLED_APPS += [
 ]
 
 # Static files
-STATICFILES_DIRS = [
-    BASE_DIR / 'project' / 'static',
-]
+STATICFILES_DIRS.append(BASE_DIR / 'project' / 'static')
 
 # Templates
 TEMPLATES = [
