@@ -1,5 +1,4 @@
 Django==5.1
-python-dotenv==1.0.1
 supervisor==4.2.5
 uvicorn==0.30.5
 

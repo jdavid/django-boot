@@ -19,6 +19,7 @@
       port            : 8000
 
     mods:
+    - "mods/dotenv"
     - "mods/sendfile"
     - "mods/vite"
 

@@ -11,15 +11,9 @@ Settings structure:
 # Standard Library
 from socket import getfqdn
 
-# Requirements
-from dotenv import load_dotenv
-
 # Project
 from project.settings_ansible import *
 
-
-# Load environment variables
-load_dotenv(f'{BASE_DIR}/.envrc')
 
 # Applications
 INSTALLED_APPS += [
