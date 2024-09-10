@@ -1,3 +1,4 @@
+/.envrc
 /ansible/*.retry
 /db.sqlite3
 /etc/
