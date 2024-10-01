@@ -46,7 +46,7 @@ ADMINS = ()
 MANAGERS = ADMINS
 
 fqdn = getfqdn()
-DEFAULT_FROM_EMAIL = 'webmaster@' + fqdn
+DEFAULT_FROM_EMAIL = 'noreply@' + fqdn
 SERVER_EMAIL = 'root@' + fqdn
 
 # Local settings, these should not be committed
