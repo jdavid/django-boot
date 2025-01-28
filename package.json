@@ -15,8 +15,7 @@
   "author": "",
   "license": "",
   "devDependencies": {
-    "sass": "^1.77",
-    "vite": "^5.4"
+    "vite": "^6.0"
   },
   "dependencies": {
   }
