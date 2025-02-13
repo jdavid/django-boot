@@ -28,6 +28,7 @@
       workers         : 6
 
     mods:
+    - "mods/compress"
     - "mods/dotenv"
     - "mods/sendfile"
     - "mods/vite"
