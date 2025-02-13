@@ -1,9 +1,9 @@
-Django==5.1.5
+Django==5.1.6
 supervisor==4.2.5
 uvicorn==0.34.0
 
 {% if database.engine == 'postgres' %}
-psycopg==3.2.3
+psycopg==3.2.4
 {% endif %}
 
 {% if cache.backend == 'memcached' %}
