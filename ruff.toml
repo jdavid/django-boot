@@ -1,4 +1,4 @@
 extend-exclude = [
-    "settings*.py",
+    "mods/*/settings.py",
     "ansible/*/templates/*"
 ]

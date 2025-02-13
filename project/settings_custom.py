@@ -1,3 +1,5 @@
+# ruff: noqa: F403 F405
+
 """
 Put your custom settings here, not in settings.py
 
