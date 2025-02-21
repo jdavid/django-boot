@@ -16,20 +16,14 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
-from django.http import HttpResponse
 from django.urls import path
 from django.views.generic import RedirectView
 
 from .urls_ansible import urlpatterns
 
 
-def ping(request):
-    return HttpResponse('pong', content_type='text/plain')
-
-
 urlpatterns += [
     path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico')),
-    path('ping', ping), # Do not remove
 ]
 
 if settings.DEBUG:

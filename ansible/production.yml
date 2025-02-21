@@ -31,8 +31,7 @@
     - "mods/admin"
     - "mods/compress"
     - "mods/dotenv"
-    - "mods/sendfile"
-    - "mods/vite"
+    - "mods/ping"
 
     django_cert:
       email           : ""

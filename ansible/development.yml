@@ -21,8 +21,6 @@
     mods:
     - "mods/admin"
     - "mods/dotenv"
-    - "mods/sendfile"
-    - "mods/vite"
 
     supervisor:
       daemon          : false
