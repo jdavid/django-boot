@@ -1,4 +1,4 @@
-Django==5.1.7
+Django==5.2
 supervisor==4.2.5
 uvicorn==0.34.0
 
