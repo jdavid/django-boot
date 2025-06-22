@@ -1,6 +1,6 @@
-Django==5.2.1
+Django==5.2.3
 supervisor==4.2.5
-uvicorn==0.34.2
+uvicorn==0.34.3
 
 {% if database.engine == 'postgres' %}
 psycopg==3.2.9
