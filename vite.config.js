@@ -10,7 +10,7 @@ export default defineConfig(({ command, mode }) => {
         base: '/static/',
         build: {
             cssCodeSplit: true,
-            manifest: "manifest.json",
+            manifest: 'manifest.json',
             outDir: 'var/build',
             rollupOptions: {
             }
@@ -37,6 +37,6 @@ export default defineConfig(({ command, mode }) => {
         }
     }
 
-    //console.log('CONFIG', config)
-    return config
+    //console.log('CONFIG', config);
+    return config;
 })
