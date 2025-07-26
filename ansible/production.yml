@@ -13,16 +13,6 @@
 
     django_name       : "django-boot-production"
 
-    cache:
-      backend         : "memcached"
-      location        : "unix:/run/memcached/memcached.sock"
-
-    database:
-      engine          : "postgres"
-      name            : ""
-      user            : ""
-      password        : ""
-
     django            :
       debug           : false
       workers         : 4
@@ -31,7 +21,14 @@
     - "mods/admin"
     - "mods/compress"
     - "mods/dotenv"
+    - "mods/memcached"
     - "mods/ping"
+    - "mods/postgres"
+
+    postgres:
+      name            : ""
+      user            : ""
+      password        : ""
 
     django_cert:
       email           : ""

@@ -11,9 +11,6 @@
     django_pull       : false
     django_with_monit : false
 
-    database:
-      engine          : "sqlite"
-
     django            :
       debug           : true
       port            : 8000
