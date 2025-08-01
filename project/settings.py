@@ -10,6 +10,7 @@
 # 4. settings_local.py   : Local settings (do not commit)
 #
 
+import importlib
 import socket
 
 # Project
@@ -42,12 +43,6 @@ LOGGING = {
             'fmt': '[{asctime}] {levelname} {name} {message}',
             'datefmt': '%d/%m/%Y:%H:%M:%S %z',  # 22/Mar/2025:10:05:09 +0100
         },
-        'uvicorn.access': {
-            '()': 'uvicorn.logging.AccessFormatter',
-            'style': '{',
-            'fmt': '[{asctime}] {levelname} {name} "{request_line}" {status_code}',
-            'datefmt': '%d/%m/%Y:%H:%M:%S %z',  # 22/Mar/2025:10:05:09 +0100
-        },
     },
     'handlers': {
         "stdout": {
@@ -59,11 +54,6 @@ LOGGING = {
             "class": "django.utils.log.AdminEmailHandler",
             "filters": ["require_debug_false"],
             "level": "ERROR",
-        },
-        'uvicorn.access': {
-            'class': 'logging.StreamHandler',
-            'stream': 'ext://sys.stdout',
-            'formatter': 'uvicorn.access',
         },
     },
     'loggers': {
@@ -78,17 +68,13 @@ LOGGING = {
             "level": "INFO",
             'propagate': True,
         },
-        # Override default uvicorn logging configuration
-        'uvicorn': {
-            'propagate': True,
-        },
-        'uvicorn.access': {
-            'handlers': ['uvicorn.access'],
-            'level': 'INFO',
-            'propagate': False,
-        },
     },
 }
+
+if importlib.util.find_spec('uvicorn'):
+    for key, value in LOGGING_UVICORN.items():
+        LOGGING[key] = value
+
 
 # Templates
 TEMPLATES = [
