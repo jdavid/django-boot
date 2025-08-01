@@ -1,4 +1,4 @@
-INSTALLED_APPS += ['channels']
+INSTALLED_APPS += ['channels']  # noqa: F821
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
@@ -7,8 +7,3 @@ CHANNEL_LAYERS = {
         },
     },
 }
-
-{% if django.debug %}
-INSTALLED_APPS.insert(0, 'daphne')
-ASGI_APPLICATION = 'project.asgi.application'
-{% endif %}
