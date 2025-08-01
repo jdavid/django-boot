@@ -16,16 +16,21 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.views import serve
 from django.urls import path
 from django.views.generic import RedirectView
 
 from .urls_ansible import urlpatterns
 
 
-urlpatterns += [
-    path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico')),
-]
-
 if settings.DEBUG:
+    # Serving statics is needed when using uvicorn, but not with runserver
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += [
+        path('favicon.ico', serve, {'path': 'img/favicon.ico'}),
+    ]
+else:
+    urlpatterns += [
+        path('favicon.ico', RedirectView.as_view(url='/static/img/favicon.ico')),
+    ]
